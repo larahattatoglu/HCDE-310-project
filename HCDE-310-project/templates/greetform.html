@@ -1,0 +1,35 @@
+<!DOCTYPE <html>
+<html>
+<head>
+    <title>Greeting Form</title>
+    <style>
+        body {color: white; }
+        body {background-color: orange;
+              background-image: url('static/cool.png');
+              }
+        h1 {font-size: 5em;
+            font-family: Roboto;
+            }
+        h2 {font-family: Roboto;}
+        p {font-size: 1em;
+           font-family: Roboto;
+
+           }
+
+    </style>
+</head>
+<body>
+<h1>Welcome!</h1>
+<h2>Get a playlist based off of the type of workout and year.</h2>
+<p> Choose from the three categories: Stretch/Cooldown, Strength, Cardio </p>
+<form action="gresponse"method="get">
+    <label for="workout">Please enter a workout:</label>
+    <input type="text"id="workout"name="workout"/><br/>
+    <label for="year">Please enter a year:</label>
+    <input type="text"id="year"name="year"/><br/>
+    <input type="submit"value="Go"name="gobtn"/> </form>
+{% if prompt %}
+<div class= 'formtitle'>{{prompt}}</div>
+{% endif %}
+</body>
+</html>
